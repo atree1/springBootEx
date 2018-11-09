@@ -27,6 +27,7 @@ public class MemberVO {
 	@Column(length=100)
 	private String mid;
 	@NotNull
+	@Column(length=200)
 	private String mpw;
 	private String mname;
 	private String email;
