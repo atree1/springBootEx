@@ -27,8 +27,8 @@ public class MemberRepositoryTests {
 	}
 	@Test
 	public void testInsert() {
-		IntStream.range(0,100).forEach(i->{
-			repo.save(MemberVO.builder().mid("user"+i).mpw("pw"+i).mname("사용자"+i).build());
+		IntStream.range(100,1000).forEach(i->{
+			repo.save(MemberVO.builder().mid("user"+i).mpw("pw"+i).mname("에이트리"+i).build());
 		});
 	}
 }
