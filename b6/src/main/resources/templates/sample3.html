@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<a th:href="@{/sample1}">Link1</a>
+<a th:href="@{~/sample1}">Link1</a>
+<a href="">Link1</a>
+
+
+
+<h2>[[${#arrays.length(arr)}]]</h2>
+<h1 th:text="${list}">ThymeLeaf Page</h1>
+	<ul th:each="member,iterState : ${list}" th:with="target='u02'">
+		<li>
+			<span th:text="${iterState.index}"></span>
+			<span th:text="${iterState.count}"></span>
+		<span th:text="${member.mid==target? 'secret':member.mid}"></span>
+		<span th:text="${member.mname}"></span>
+		<span th:text="${#dates.format(member.regdate,'yyyy-MM-dd')}"></span>	
+		
+		</li>
+	</ul>
+	<script th:inline="javascript" >
+	var result=[[${result}]];
+	
+	if(result==='SUCCESS'){
+		alert('aaa');
+	}
+	</script>
+</body>
+</html>
