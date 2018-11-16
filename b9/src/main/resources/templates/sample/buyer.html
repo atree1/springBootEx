@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 >buyer Page</h1>
+
+
+<div sec:authorize="hasRole('MEMBER')">Member menu</div>
+<div sec:authorize="hasRole('BUYER')">buyer menu</div>
+<div sec:authorize="hasRole('ADMIN')">admin menu</div>
+<div sec:authorize="isAuthenticated()">login</div>
+
+
+
+</body>
+</html>
